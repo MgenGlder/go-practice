@@ -34,6 +34,16 @@ goimports -l -w .
 
 The `-l` flag signifies to print the files with incorrect formatting. The `-w` command signifies to modify the files in place. The `.` specifies the files to be scanned, everything.
 
+Note ‼️ If you're receiving the following error, or something similar:
+
+`zsh: command not found: goimports`
+
+You may need to update your `.bashrc` or `.zshrc` to contain the following path:
+
+`PATH="$PATH:$HOME/go/bin"`
+
+This can be done by first running `vim ~/.zshrc` or `vim ~/.bashrc` if you're on Mac or a Linux-based machine and editing the file from within the Vim editor.
+
 ## Linting
 Remember, `go fmt` formats the code supplied to it, adjusting the spacing and style to match Go styling standards. There is another tool called `golint` that will analyze whether the code under review is following idiomatic Go standards.
 
