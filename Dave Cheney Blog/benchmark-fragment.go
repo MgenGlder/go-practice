@@ -11,6 +11,7 @@ func main() {
 	BenchmarkSortStrings()
 }
 
+// BenchmarkSortStrings prints the amount of time it takes to sort a provided string
 func BenchmarkSortStrings(b *testing.B) {
 	s := []string{"heart", "lungs", "brain", "kidneys", "pancreas"} // := is short variable declaration in go
 	b.ReportAllocs()
