@@ -1,3 +1,12 @@
+# Table of Contents
+1. [Running a Go File](#running-a-go-file)
+2. [Getting Third-Party Go Tools](#getting-third-party-go-tools)
+3. [Formatting](#formatting)
+4. [Initializing a module](#initializing-a-module)
+5. [Semicolon Insertion Rule](#semicolon-insertion-rule)
+6. [Formatting imports](#formatting-imports)
+6. [Linting](#linting)
+
 ## Running a Go File
 To run a go file, execute the following in the terminal:
 
