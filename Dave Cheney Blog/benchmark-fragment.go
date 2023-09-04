@@ -8,7 +8,7 @@ import (
 
 func main() {
 	fmt.Println("Running benchmarkSortStrings..")
-	BenchmarkSortStrings()
+	// BenchmarkSortStrings() // TODO: Generate a benchmark test object
 }
 
 // BenchmarkSortStrings prints the amount of time it takes to sort a provided string

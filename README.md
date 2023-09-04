@@ -56,4 +56,11 @@ This can be done by first running `vim ~/.zshrc` or `vim ~/.bashrc` if you're on
 ## Linting
 Remember, `go fmt` formats the code supplied to it, adjusting the spacing and style to match Go styling standards. There is another tool called `golint` that will analyze whether the code under review is following idiomatic Go standards.
 
-You can install this tool with the following command: `go install golang.org/x/lint/golint@latest`. You can then run it with `golint ./...`.
+You can install this tool with the following command: `go install golang.org/x/lint/golint@latest`. You can then run it with `golint ./...`. This runs `golint` over the entire project.
+
+## Other Linting Tools
+There is another tool whose purpose is to catch syntactically valid errors that mistakes that might not be what you intended to do. One such tool is `vet`, which can be run with the `go vet ./...` command.
+
+You can run a suite of formatting and linting tools with the `golangci-lint` tool. It can be run with the `golangci-lint run` command.
+
+It's recommended to start off using `go vet` as a part of ci, and individually vetting each tool in the `golangci-lint` suite to find the combination that best works for you and your team.
