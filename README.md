@@ -5,7 +5,9 @@
 4. [Initializing a module](#initializing-a-module)
 5. [Semicolon Insertion Rule](#semicolon-insertion-rule)
 6. [Formatting imports](#formatting-imports)
-6. [Linting](#linting)
+7. [Linting](#linting)
+8. [Other Linting Tools](#other-linting-tools)
+9. [Testing in the Playground](#testing-in-the-playground)
 
 ## Running a Go File
 To run a go file, execute the following in the terminal:
@@ -64,3 +66,29 @@ There is another tool whose purpose is to catch syntactically valid errors that 
 You can run a suite of formatting and linting tools with the `golangci-lint` tool. It can be run with the `golangci-lint run` command.
 
 It's recommended to start off using `go vet` as a part of ci, and individually vetting each tool in the `golangci-lint` suite to find the combination that best works for you and your team.
+
+## Testing In The Playground
+If you don't have an intergrated development environment set up (or don't want to set one up), you can test-run code in the [online playground](https://play.golang.com/). You can simluate editing different files using the code
+`-- otherfile.go --` inbetween the different files.
+
+## Automating Builds
+Go developers have opted in general to use `make` and `Makefile`'s as their go-to structure for automating build tasks. 
+One drawback of Makefiles is that you need to make sure they are indented properly or they will fail.
+
+## Testing against new versions of Go
+Go has made a promise to not introduce breaking changes in any versions starting with the same major version [here](https://go.googlesource.com/proposal/+/master/design/56986-godebug.md#:~:text=Go%201%20introduced%20Go's%20compatibility,and%20certain%20other%20implementation%20overfitting.). That said, mistakes happen so the way to test you code against specific versions of go is with the following:
+```
+go get golang.org/dl/go.1.15.6
+go1.15.6 download
+```
+
+You can then build your code against the version with:
+
+`go1.15.6 build`
+
+Once done, you can delete the old version, and replace it with the new version if you want to switch:
+
+```
+rm -rf #(go1.15.6 env GOROOT)
+rm $(go env GOPATH)/bin/go1.15.6
+```
