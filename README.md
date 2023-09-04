@@ -8,6 +8,8 @@
 7. [Linting](#linting)
 8. [Other Linting Tools](#other-linting-tools)
 9. [Testing in the Playground](#testing-in-the-playground)
+10. [Automatic builds](#automating-builds)
+11. [Testing against new versions of go](#testing-against-new-versions-of-go)
 
 ## Running a Go File
 To run a go file, execute the following in the terminal:
