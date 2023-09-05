@@ -13,7 +13,8 @@ on:
     types:
       - labeled
 jobs:
-  environment: main
+  environment:
+    name: main
   add-comment:
     runs-on: ubuntu-latest
     permissions:
