@@ -8,6 +8,3 @@ PLATFORMS
 
 DEPENDENCIES
   jwt (~> 2.7)
-
-BUNDLED WITH
-   1.17.2
