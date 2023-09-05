@@ -21,8 +21,7 @@ jobs:
     permissions:
       issues: write
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
       - name: install ruby
         uses: ruby/setup-ruby@v1
         with:
