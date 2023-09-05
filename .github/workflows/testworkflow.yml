@@ -21,6 +21,15 @@ jobs:
     permissions:
       issues: write
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: install ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+      - name: exec ruby file
+        run: ruby generate_jwt.rb
       - name: Add comment
         uses: peter-evans/create-or-update-comment@5f728c3dae25f329afbe34ee4d08eef25569d79f
         with:
