@@ -13,9 +13,10 @@ on:
     types:
       - labeled
 jobs:
-  environment:
-    name: main
+  
   add-comment:
+    environment:
+      name: main
     runs-on: ubuntu-latest
     permissions:
       issues: write
