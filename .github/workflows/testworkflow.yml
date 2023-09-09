@@ -58,6 +58,8 @@ jobs:
       - id: step4
         name: run script
         run: cd src; node index.mjs
+        env:
+          PRIVATE_KEY: ${{secrets.PRIVATE_KEY}}
       - id: step5
         name: print
         run: echo "${{steps.step4.outputs.outputKey}}"
