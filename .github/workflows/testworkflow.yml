@@ -57,7 +57,7 @@ jobs:
         run: cd src; npm install;
       - id: step4
         name: run script
-        run: cd src; node index.js
+        run: cd src; node index.mjs
       - id: step5
         name: print
         run: echo "${{steps.step4.outputs.outputKey}}"
