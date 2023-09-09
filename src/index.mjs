@@ -1,6 +1,6 @@
-const core = require('@actions/core');
-const gh = require('@actions/github');
-const { createAppAuth } = require("@octokit/auth-app");
+import * as core from '@actions/core';
+import * as gh from '@actions/github'
+import { createAppAuth } from "@octokit/auth-app";
 
 const auth = createAppAuth({
     appId: 385501,
