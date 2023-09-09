@@ -41,15 +41,26 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       issues: write
+    outputs:
+      output1: ${{ steps.step1.outputs.outputKey }}
     steps:
-      - name: checkout repo
+      - id: step1
+        name: checkout repo
         uses: actions/checkout@v3
-      - name: install nodejs
+      - id: step2
+        name: install nodejs
         uses: actions/setup-node@v3
         with: 
           node-version: latest
-      - name: test npm is here
-        run: cd src; npm install; node index.js
+      - id: step3
+        name: install packages
+        run: cd src; npm install;
+      - id: step4
+        name: run script
+        run: node index.js
+      - id: step5
+        name: print
+        run: echo "${{steps.step1.outputs.outputKey}}""
       
       
 
