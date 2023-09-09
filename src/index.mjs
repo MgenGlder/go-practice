@@ -16,12 +16,14 @@ const auth = createAppAuth({
 
   const octokit = gh.getOctokit(installationAuthentication.token)
 
-  await octokit.rest.issues.create({
+ let response = await octokit.rest.issues.create({
     owner: 'MgenGlder',
     repo: 'go-practice',
     title: 'testing-issue',
+    body: 'This is a test issue, written from an action!',
+    
   });
 
-core.setOutput('outputKey', 'We da best');
+core.setOutput('outputKey', JSON.stringify(response));
 
 console.log('testin ')
