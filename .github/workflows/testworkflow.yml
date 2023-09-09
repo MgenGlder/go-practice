@@ -21,10 +21,10 @@ jobs:
       issues: write
     steps:
       uses: actions/checkout@v3
-      name: install ruby
+      - name: install ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2'
+        - ruby-version: '3.2'
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
       name: exec ruby file
         run: bundle exec ruby src/generate_jwt.rb
