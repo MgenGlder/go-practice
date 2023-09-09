@@ -38,7 +38,7 @@ jobs:
   #           This issue is available for anyone to work on. **Make sure to reference this issue in your pull request.** :sparkles: Thank you for your contribution! :sparkles:
   comment-output:
     environment: main
-    runs-on: ubuntu
+    runs-on: ubuntu-latest
     permissions:
       issues: write
     steps:
