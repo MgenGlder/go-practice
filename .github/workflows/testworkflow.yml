@@ -20,15 +20,16 @@ jobs:
     permissions:
       issues: write
     steps:
-      uses: actions/checkout@v3
+      - name: checkout repo
+        uses: actions/checkout@v3
       - name: install ruby
         uses: ruby/setup-ruby@v1
         with:
-        - ruby-version: '3.2'
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-      name: exec ruby file
+          - ruby-version: '3.2'
+          - bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+      - name: exec ruby file
         run: bundle exec ruby src/generate_jwt.rb
-      name: Add comment
+      - name: Add comment
         uses: peter-evans/create-or-update-comment@5f728c3dae25f329afbe34ee4d08eef25569d79f
         with:
           token: ${{ secrets.APP_TOKEN }}
@@ -41,13 +42,13 @@ jobs:
     permissions:
       issues: write
     steps:
-      name: checkout repo
+      - name: checkout repo
         uses: actions/checkout@v3
-      name: install nodejs
+      - name: install nodejs
         uses: actions/setup-node@v3
           with: 
             node-version: latest
-      name: test npm is here
+      - name: test npm is here
         run: npm -v && node -v
       
 
