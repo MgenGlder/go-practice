@@ -49,7 +49,7 @@ jobs:
         with: 
           node-version: latest
       - name: test npm is here
-        run: cd src; node index.js
+        run: cd src; npm install; node index.js
       
       
 
