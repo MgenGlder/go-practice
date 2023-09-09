@@ -14,9 +14,9 @@ const auth = createAppAuth({
     installationId: 41452144,
   });
 
-  const octokit = github.getOctokit(installationAuthentication.token)
+  const octokit = gh.getOctokit(installationAuthentication.token)
 
-  await octokit.rest.issues.create({
+  octokit.rest.issues.create({
     owner: 'MgenGlder',
     repo: 'go-practice',
     title: 'testing-issue',
