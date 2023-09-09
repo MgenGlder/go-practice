@@ -60,7 +60,7 @@ jobs:
         run: cd src; node index.js
       - id: step5
         name: print
-        run: echo "${{steps.step1.outputs.outputKey}}""
+        run: echo "${{steps.step4.outputs.outputKey}}"
       
       
 
