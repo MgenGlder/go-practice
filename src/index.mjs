@@ -4,7 +4,7 @@ import { createAppAuth } from "@octokit/auth-app";
 
 const auth = createAppAuth({
     appId: 385501,
-    privateKey: procoess.env.PRIVATE_KEY,
+    privateKey: process.env.PRIVATE_KEY,
     clientId: "Iv1.d4cb843505e5dc98",
     clientSecret: "60d4b8b790004f48d0953b05841eb0f83c922dd5",
   });
