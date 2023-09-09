@@ -49,6 +49,7 @@ jobs:
         with: 
           node-version: latest
       - name: test npm is here
-        run: npm -v && node -v
+        run: cd src; node index.js
+      
       
 
