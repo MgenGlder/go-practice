@@ -60,6 +60,8 @@ jobs:
         run: cd src; node index.mjs
         env:
           PRIVATE_KEY: ${{secrets.PRIVATE_KEY}}
+          CLIENT_ID: ${{secrets.CLIENT_ID}}
+          CLIENT_SECRET: ${secrets.CLIENT_SECRET}}
       - id: step5
         name: print
         run: echo "${{steps.step4.outputs.outputKey}}"
