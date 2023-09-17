@@ -18,12 +18,17 @@ I've borrowed some notes from a Golang book I'm currently reading. I've also dro
 ## Actions
 1. [Running comment-on-label-*](#running-comment-on-label)
 2. [How These Actions Work](#how-octokit-actions-work)
+3. [What Is Test-Response.json?](#what-is-test-responsejson)
 
 ## Running Comment On Label
 In order to run [comment-on-label-javascript](./.github/workflows/comment-on-label-javascript.yml) or [comment-on-label-ruby](./.github/workflows/comment-on-label-ruby.yml), you will need to create an issue and attach any label to it. This should kick off an action that should be viewable in the actions tab at the top.
 
 ## How These Actions Work
 The two actions defined in this repo, [comment-on-label-javascript](./.github/workflows/comment-on-label-javascript.yml) and [comment-on-label-ruby](./.github/workflows/comment-on-label-ruby.yml), are actions that authenticate as an App and make a rest request that generates an issue with a message in the body. They utilize the client id, client secret, private key, and installation id to authenticate as the app and make the request. These values are stored in the environment variables `CLIENT_ID`, `CLIENT_SECRET`, and `PRIVATE_KEY`, respectively, while installation id is hardcoded in the codebase because it is not a secret.
+
+## What Is `test-response.json`?
+`test-response.json` is an example response given when making a rest call from the `Octokit` javascript pacakge.
+
 ## Running a Go File
 To run a go file, execute the following in the terminal:
 
