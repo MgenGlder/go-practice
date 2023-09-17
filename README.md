@@ -1,4 +1,5 @@
 # Table of Contents
+## Go
 1. [Running a Go File](#running-a-go-file)
 2. [Getting Third-Party Go Tools](#getting-third-party-go-tools)
 3. [Formatting](#formatting)
@@ -10,6 +11,12 @@
 9. [Testing in the Playground](#testing-in-the-playground)
 10. [Automatic builds](#automating-builds)
 11. [Testing against new versions of go](#testing-against-new-versions-of-go)
+
+## Actions
+1. [Running comment-on-label](#running-comment-on-label)
+
+## Running Comment On Label
+In order to run [comment-on-label](./.github/workflows/comment-on-label.yml), you need to create an issue and attach any label to it. This should kick off an action that should be viewable in the actions tab.
 
 ## Running a Go File
 To run a go file, execute the following in the terminal:
