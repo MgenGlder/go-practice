@@ -46,7 +46,7 @@ Go is strict about its stylistic guidelines. There's a standard formatter the co
 In order to format your code (amongst other things), you may need to instantiate your disparate collection of go files into a module. This can be done with the `go mod init <name-of-main-file.go>` command. Afterwards, a `go.mod` file should be created in the root of the directory you ran the command in.
 
 ## Semicolon Insertion Rule
-Note that Go has a Semicolon Insertion Rule™. This means that although semicolons are not required as development type, in contrast to other languages in the C family, they are automatically inserted by the compiler at the end of any relevant line by the compiler. This is part of the reason why following the strict style guidelines is so important when writing Go. This rule is one of the things that makes the Go compiler simpler and faster, while at the same time enforcing a coding style.
+Note that Go has a Semicolon Insertion Rule™. This means that although semicolons are not required in development. In contrast to other languages in the C family, they are automatically inserted by the compiler at the end of any relevant line by the compiler. This is part of the reason why following the strict style guidelines is so important when writing Go. This rule is one of the things that makes the Go compiler simpler and faster, while at the same time enforcing a coding style.
 
 ## Formatting Imports
 There's a really neat tool to ensure your imports follow stying best practices as well called `goimports`. You can install it with the following command: `go install golang.org/x/tools/cmd/goimports@latest`. Once installed, you can run it with the following command:
