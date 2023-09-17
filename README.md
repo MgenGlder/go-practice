@@ -36,14 +36,14 @@ To build a go file, execute the following in the terminal:
 ## Getting Third-Party Go Tools
 Many people distribute their Go tools as source code, and have the recipient download and build the tools on their local machine. The command line tool to do this is `go install <location-of-pacakge>`.
 
-For example, to install the `hey` package, you could run the following command in your terminal
+For example, to install the `hey` package, you could run the following command in your terminal:
 
 `go install github.com/rakyll/hey@latest`
 
-The downloads `hey` and all of its dependencies, builds the program, and installs the binary in your _$GOPATH/bin_ directory.
+This downloads `hey` and all of its dependencies, builds the program, and installs the binary in your _$GOPATH/bin_ directory.
 
 ## Formatting
-Go is strict about its stylistic guidelines. There's a standard formatter the comes as part of the go dev tools called `fmt` that will automatically format your code to match these standards. You can run it by executing the following in your terminal: `go fmt`.
+Go is strict about its stylistic guidelines. There's a standard formatter that comes as part of the go dev tools called `fmt` that will automatically format your code to match these standards. You can run it by executing the following in your terminal: `go fmt`.
 
 ## Initializing a module
 In order to format your code (amongst other things), you may need to instantiate your disparate collection of go files into a module. This can be done with the `go mod init <name-of-main-file.go>` command. Afterwards, a `go.mod` file should be created in the root of the directory you ran the command in.
