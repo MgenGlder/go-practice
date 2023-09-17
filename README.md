@@ -16,7 +16,7 @@ I've borrowed some notes from a Golang book I'm currently reading. I've also dro
 11. [Testing against new versions of go](#testing-against-new-versions-of-go)
 
 ## Actions
-1. [Running comment-on-label-*](#running-comment-on-label)
+1. [Running `comment-on-label-*.yaml` Actions](#running-comment-on-label)
 2. [How These Actions Work](#how-octokit-actions-work)
 3. [What Is `test-response.json`?](#what-is-test-responsejson)
 
