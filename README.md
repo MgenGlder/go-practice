@@ -18,7 +18,7 @@ I've borrowed some notes from a Golang book I'm currently reading. I've also dro
 ## Actions
 1. [Running comment-on-label-*](#running-comment-on-label)
 2. [How These Actions Work](#how-octokit-actions-work)
-3. [What Is Test-Response.json?](#what-is-test-responsejson)
+3. [What Is `test-response.json`?](#what-is-test-responsejson)
 
 ## Running Comment On Label
 In order to run [comment-on-label-javascript](./.github/workflows/comment-on-label-javascript.yml) or [comment-on-label-ruby](./.github/workflows/comment-on-label-ruby.yml), you will need to create an issue and attach any label to it. This should kick off an action that should be viewable in the actions tab at the top.
