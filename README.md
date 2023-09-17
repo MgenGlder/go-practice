@@ -1,3 +1,6 @@
+# Combined Golang™ and GitHub Actions™ Practice Repo
+I've borrowed some notes from a Golang book I'm currently reading. I've also dropped some practice actions I've written that I'm using as practice.
+
 # Table of Contents
 ## Go
 1. [Running a Go File](#running-a-go-file)
