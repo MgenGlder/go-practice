@@ -6,6 +6,7 @@ import (
 	"testing"
 )
 
+// Runs benchmarking code borrowed from Dave Cheney's Blog
 func main() {
 	fmt.Println("Running benchmarkSortStrings..")
 	// BenchmarkSortStrings() // TODO: Generate a benchmark test object
